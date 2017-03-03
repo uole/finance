@@ -15,6 +15,8 @@ type Fund struct {
 
 func NewFund(code string) (*Fund, error) {
 	strUrl := "http://stocks.sina.cn/fund/?vt=4&code=" + code
+
+	//http://fundgz.1234567.com.cn/js/210009.js?rt=1488528176128
 	doc, err := goquery.NewDocument(strUrl)
 	if err != nil {
 		return nil, err
