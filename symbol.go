@@ -85,6 +85,5 @@ func (a ShangHaiAdapter) Find() ([]Symbol, error) {
 }
 
 func FindAll() ([]Symbol, error) {
-
 	return nil, nil
 }

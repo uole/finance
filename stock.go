@@ -37,7 +37,7 @@ func (s *Stock) GrowthRate() float64 {
 }
 
 // get stock info
-func GetStock(code string) (*Stock, error) {
+func StockQuote(code string) (*Stock, error) {
 	if code == "" {
 		return nil, errors.New("stock code can't empty")
 	}
