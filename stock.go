@@ -14,7 +14,7 @@ type Stock struct {
 	Code     string
 	Open     float64
 	Close    float64
-	Price    float64
+	Quote    float64
 	High     float64
 	Low      float64
 	Volume   float64
@@ -29,7 +29,7 @@ func GetList() []string {
 // calc stock growth
 //https://github.com/nzai/stockrecorder/blob/master/market/china.go
 func (s *Stock) GrowthRate() float64 {
-	v := (s.Price - s.Close) / s.Close * 100
+	v := (s.Quote - s.Close) / s.Close * 100
 	if val, err := arith.Round(v, 3); err == nil {
 		return val
 	}
@@ -67,7 +67,7 @@ func StockQuote(code string) (*Stock, error) {
 			stock := &Stock{
 				Name:     data[0],
 				Code:     code,
-				Price:    convert.ParseFloat(data[3]),
+				Quote:    convert.ParseFloat(data[3]),
 				Open:     convert.ParseFloat(data[1]),
 				Close:    convert.ParseFloat(data[2]),
 				High:     convert.ParseFloat(data[4]),
