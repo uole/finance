@@ -1,8 +1,8 @@
 package finance
 
 import (
-	"github.com/uole/loso/convert"
-	"github.com/uole/loso/http/client"
+	"github.com/uole/gokit/convert"
+	"github.com/uole/gokit/http/client"
 	"log"
 	"strings"
 )

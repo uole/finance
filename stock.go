@@ -2,9 +2,9 @@ package finance
 
 import (
 	"errors"
-	"github.com/uole/loso/arith"
-	"github.com/uole/loso/convert"
-	"github.com/uole/loso/http/client"
+	"github.com/uole/gokit/arith"
+	"github.com/uole/gokit/convert"
+	"github.com/uole/gokit/http/client"
 	"regexp"
 	"strings"
 )
