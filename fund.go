@@ -10,7 +10,6 @@ import (
 	"regexp"
 	"strconv"
 	"time"
-	"log"
 )
 
 type Fund struct {
@@ -52,7 +51,6 @@ func FundQuote(code string) (*Fund, error) {
 	if len(matches) > 0 {
 		jsonFund := &fundData{}
 		if err = json.Unmarshal([]byte(matches[0]), jsonFund); err == nil {
-			log.Println(jsonFund)
 			preTime, err := time.Parse("2006-01-02 15:04", jsonFund.Gztime)
 			if err != nil {
 				preTime = time.Now()
